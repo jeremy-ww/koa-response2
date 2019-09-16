@@ -1,4 +1,4 @@
-# koa-response2 [![minified + gzip](https://badgen.net/bundlephobia/minzip/koa-response2)](https://bundlephobia.com/result?p=koa-response2) [![npm package](https://flat.badgen.net/npm/v/koa-response2)](https://www.npmjs.com/package/koa-response2)
+# koa-response2 [![minified + gzip](https://flat.badgen.net/bundlephobia/minzip/koa-response2)](https://bundlephobia.com/result?p=koa-response2) [![npm package](https://flat.badgen.net/npm/v/koa-response2)](https://www.npmjs.com/package/koa-response2)
 
 <img src="https://i.imgur.com/tlrSYYr.png" />
 
