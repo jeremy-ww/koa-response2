@@ -1,5 +1,6 @@
 import axios from 'axios'
 import Router from 'koa-router'
+import { Server } from 'http'
 import Koa, { ParameterizedContext } from 'koa'
 
 import KoaResponse from '../'
@@ -9,6 +10,7 @@ const fetch = axios.create({
 })
 
 let app: Koa
+let http: Server
 
 beforeAll(function() {
   return new Promise(async resolve => {
@@ -41,10 +43,14 @@ beforeAll(function() {
 
     app.use(router.routes()).use(router.allowedMethods())
 
-    app.listen(3000, function() {
+    http = app.listen(3000, function() {
       resolve()
     })
   })
+})
+
+afterAll(function() {
+  http.close()
 })
 
 test('200', async () => {

@@ -26,5 +26,16 @@
     "koa-router": "^7.4.0",
     "ts-jest": "^24.1.0",
     "typescript": "^3.6.3"
+  },
+  "jest": {
+    "clearMocks": true,
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[tj]s?(x)"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
   }
 }
