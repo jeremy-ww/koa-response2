@@ -2,7 +2,7 @@
 
 <img src="https://i.imgur.com/tlrSYYr.png" />
 
-Inspired by [koa-respond](https://github.com/jeffijoe/koa-respond).
+Inspired by [koa-respond](https://github.com/jeffijoe/koa-respond). [Checkout what's the difference](#Difference).
 
 ## Install
 
@@ -85,6 +85,14 @@ app.use(koaReponse({
   }
 }))
 ```
+
+## Difference
+
+`koa-response2` is inspired by [koa-respond](https://github.com/jeffijoe/koa-respond), so what's the difference between the two?
+
+- Better typescript typing experience
+- Ability to modify response globally
+- Comprehensive built-in HTTP status API
 
 ## Availble Context API
 
