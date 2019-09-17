@@ -2,6 +2,8 @@
 
 <img src="https://i.imgur.com/tlrSYYr.png" />
 
+Inspired by [koa-respond](https://github.com/jeffijoe/koa-respond).
+
 ## Install
 
 ```bash
@@ -19,9 +21,9 @@ const app = new Koa()
 app.use(koaReponse())
 
 export default function (ctx: ParameterizedContext) {
-  ctx.oK()                       // HTTP Code: 200
-  ctx.notFound()                 // HTTP Code: 404
-  ctx.internalServerError()      // HTTP Code: 500
+  ctx.oK({ id: 123, name: 'Dat Boi' })  // HTTP Code: 200, Response: { id: 123, name: 'Dat Boi' }
+  ctx.notFound('Not found, boii')       // HTTP Code: 404, Response: 'Not found, boii'
+  ctx.internalServerError('error')      // HTTP Code: 500, Response: 'error'
   ctx.send(200, { name: 'tom' }, 'success')
 }
 ```
@@ -53,6 +55,8 @@ app.use(koaReponse({
     whatever: 999
   }
 }))
+
+ctx.whatever(data, message)
 ```
 
 For better typing experience, you should [override declaration file like this](https://github.com/Army-U/koa-response2/blob/develop/koa.d.ts).
