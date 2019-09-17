@@ -11,6 +11,7 @@ const STATUS_MAP_WITH_BODY = {
   multipleChoices: 300,
 
   badRequest: 400,
+  unauthorized: 401,
   paymentRequired: 402,
   forbidden: 403,
   notFound: 404,
@@ -68,7 +69,6 @@ const STATUS_MAP_WITHOUT_BODY = {
   // temporaryRedirect: 307,
   // permanentRedirect: 308,
 
-  unauthorized: 401,
   proxyAuthenticationRequired: 407
 }
 

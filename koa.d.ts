@@ -9,6 +9,7 @@ declare module 'koa' {
     | 'partialContent'
     | 'multipleChoices'
     | 'badRequest'
+    | 'unauthorized'
     | 'paymentRequired'
     | 'forbidden'
     | 'notFound'
