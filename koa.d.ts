@@ -1,36 +1,19 @@
 import Koa, { ExtendableContext } from 'koa'
 
 declare module 'koa' {
-  type KoaReponseType =
-    | 'continue'
-    | 'switchingProtocols'
-    | 'processing'
+  type KoaReponseTypeWithBody =
     | 'oK'
     | 'created'
     | 'accepted'
     | 'nonAuthoritativeInformation'
-    | 'noContent'
-    | 'resetContent'
     | 'partialContent'
-    | 'multiStatus'
-    | 'alreadyReported'
-    | 'iMUsed'
     | 'multipleChoices'
-    | 'movedPermanently'
-    | 'found'
-    | 'seeOther'
-    | 'notModified'
-    | 'useProxy'
-    | 'temporaryRedirect'
-    | 'permanentRedirect'
     | 'badRequest'
-    | 'unauthorized'
     | 'paymentRequired'
     | 'forbidden'
     | 'notFound'
     | 'methodNotAllowed'
     | 'notAcceptable'
-    | 'proxyAuthenticationRequired'
     | 'requestTimeout'
     | 'conflict'
     | 'gone'
@@ -41,7 +24,7 @@ declare module 'koa' {
     | 'unsupportedMediaType'
     | 'requestedRangeNotSatisfiable'
     | 'expectationFailed'
-    | 'mATeapot'
+    | 'imATeapot'
     | 'misdirectedRequest'
     | 'unprocessableEntity'
     | 'locked'
@@ -50,9 +33,7 @@ declare module 'koa' {
     | 'preconditionRequired'
     | 'tooManyRequests'
     | 'requestHeaderFieldsTooLarge'
-    | 'connectionClosedWithoutResponse'
     | 'unavailableForLegalReasons'
-    | 'clientClosedRequest'
     | 'internalServerError'
     | 'notImplemented'
     | 'badGateway'
@@ -66,9 +47,21 @@ declare module 'koa' {
     | 'networkAuthenticationRequired'
     | 'networkConnectTimeoutError'
 
-  interface ExtendableContext
-    extends Record<KoaReponseType, (payload?: any, message?: string) => void> {
+  type KoaReponseTypeWithoutBody =
+    | 'continue'
+    | 'switchingProtocols'
+    | 'processing'
+    | 'noContent'
+    | 'resetContent'
+    | 'unauthorized'
+    | 'proxyAuthenticationRequired'
 
+  interface ExtendableContext
+    extends Record<
+        KoaReponseTypeWithBody,
+        (payload?: any, message?: string) => void
+      >,
+      Record<KoaReponseTypeWithoutBody, () => void> {
     /**
      * @param {number} status HTTP status code
      * @param {any} payload Response
