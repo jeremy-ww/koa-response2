@@ -54,7 +54,6 @@ declare module 'koa' {
     | 'processing'
     | 'noContent'
     | 'resetContent'
-    | 'unauthorized'
     | 'proxyAuthenticationRequired'
 
   interface ExtendableContext
