@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "build": "tsc --build tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.2",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-response2": "1.0.3"
+  }
+}
