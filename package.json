@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "koa": "^2.11.0",
-    "koa-response2": "1.0.3"
+    "koa-response2": "^1.0.4"
   }
 }

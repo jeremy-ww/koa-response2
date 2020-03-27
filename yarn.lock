@@ -262,10 +262,10 @@ koa-convert@^1.2.0:
     co "^4.6.0"
     koa-compose "^3.0.0"
 
-koa-response2@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/koa-response2/-/koa-response2-1.0.3.tgz#5548788d3c158cfac2f49350634f3b5ae24e2bed"
-  integrity sha512-1BrlS8/+tN2mHyzrrKTDT2c9raOy3EC0f6Yk7R6bwAVWNpJ73lUheFNrm+srTkryd3k7lmeSPxJmeFYS8d07Ng==
+koa-response2@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/koa-response2/-/koa-response2-1.0.4.tgz#b46b7d13393fb082897472bbb3a6458c791d64fa"
+  integrity sha512-QGW5eXaPhUfpLa2M5LeAAMDTb5Sjy0rGl/w6Mnf7qHvRK3Ymb5wV+reo58POTMyGl83kifNCQ5iu2gwaAzXM1A==
 
 koa@^2.11.0:
   version "2.11.0"
