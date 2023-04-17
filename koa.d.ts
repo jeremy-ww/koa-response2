@@ -1,4 +1,5 @@
-import Koa, { ExtendableContext } from 'koa'
+import * as Koa from 'koa'
+import { ExtendableContext } from 'koa'
 
 declare module 'koa' {
   type KoaReponseTypeWithBody =
